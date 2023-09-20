@@ -1,0 +1,225 @@
+.nav{
+   background: #053B50;
+   color: white;
+   padding: 0 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    text-transform: uppercase;
+}
+.nav div:last-child{
+    display: flex;
+    gap: 30px;
+}
+.nav a{
+    color: inherit;
+    text-decoration: none;
+}
+.nav button{
+    text-transform: uppercase;
+    background-color: #176B87;
+    color: inherit;
+    border: none;
+    font-size: 16px;
+    max-height: 60%;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+.brief{
+    white-space: pre-wrap;
+}
+.main{
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.post_box{
+    width: 400px;
+    min-height: 200px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px lightgray;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.post_box:hover{
+    transform: scale(1.02);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f8ff;
+    white-space: pre;
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid lightblue;
+}
+.signup_link{
+    color: #176B87;
+    cursor: pointer;
+}
+.signup_link:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inputs div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.form{
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.form button, input{
+    padding: 2px 10px;
+    outline: none;
+}
+.form input{
+    font-size: 20px;
+    border: 1px solid lightgray;
+}
+.form button{
+    margin: 10px 0 0 15px;
+    padding: 5px 10px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 7px;
+    background: #176B87;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+.post{
+    padding: 10px 70px;
+    margin-top: 5px;
+}
+.footer_box{
+    padding: 10px 50px;
+    background-color: #053B50;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+.footer ul li{
+    list-style: none;
+}
+.footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.footer ul a{
+    color: white;
+    text-decoration: none;
+}
+a{
+    transition: all 0.2s;
+}
+a:hover{
+    color: gray !important;
+}
+.menu{
+    display: flex ; 
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+.burger{
+    display: none;
+}
+
+@media (max-width : 500px) {
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .post_box{
+        width: 90vw;
+    }
+    .burger{
+        display: block;
+        fill: white;
+        font-size: 20px;
+    }
+    .menu{
+        flex-direction: column;
+        position: absolute;
+        width: 90vw;
+        padding: 10px 20px;
+        top: 70px;
+        right: 0;
+        background-color: gray;
+    }
+    .menu ul,.menu div{
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+    .menu div{
+        margin-top: 20px;
+    }
+    .menu div button{
+        max-width: 40%;
+    }
+}
+.addblog{
+    text-align: center;
+}
+
+.form textarea{
+    width: 100%;
+    height: 200px;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+}
+.loader{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    border-bottom: 2px solid red;
+    border-top: 2px solid green;
+    border-right: 2px solid yellow;
+    animation: load 1s infinite;
+}
+@keyframes load {
+    0%{
+       transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.account{
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    box-shadow: 0 0 4px gray;
+}
