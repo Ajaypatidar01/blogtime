@@ -13,7 +13,6 @@ function AllBlogs() {
     useEffect(() => {
         getPosts(); 
         const myPostsData =  localStorage.getItem('myBlogs');
-        console.log(JSON.parse(myPostsData));
         setMyPosts(JSON.parse(myPostsData));
     }, [isLoggedIn]);
     const getPosts = async () => {
@@ -35,9 +34,9 @@ function AllBlogs() {
         {loading && <div className={Classes.loader}></div>}
         <main className={Classes.main}>
              {myPosts !== null && myPosts.map(item =>  <div onClick={() => {navigate(`/blog/${item.id}`)}}  className={Classes.post_box} key={item.id}>
-                <h2 style={{textAlign : 'center'}}>{item.title.substr()}</h2>
+                <h2 style={{textAlign : 'center'}}>{item.title.slice(0, 34)}</h2>
                 <div>
-                    <p className={Classes}>{item.body.slice(0,70)}... <span style={{color : 'blue'}}>Read More</span></p>
+                    <p className={Classes}>{item.body.slice(0,150)}... <span style={{color : 'blue'}}>Read More</span></p>
                 </div>
             </div>)}
             { posts.map(item =>  <div onClick={() => {navigate(`/blog/${item.id}`)}}  className={Classes.post_box} key={item.id}>

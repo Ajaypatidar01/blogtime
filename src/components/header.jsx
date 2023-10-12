@@ -8,7 +8,6 @@ function Header() {
     const {isLoggedIn, setIsLoggedIn} = useContext(UserContext);
     useEffect(() => {
         const user = localStorage.getItem('user');
-        console.log(JSON.parse(user));
         if(user){
         setIsLoggedIn(true);
         }
