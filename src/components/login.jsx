@@ -31,7 +31,7 @@ function Login() {
                 </div>
                 <div>
                   <label htmlFor="password">Password</label>
-                  <input value={cred.password} onChange={handleChange} type="text" id="password" required spellCheck='false'/>
+                  <input value={cred.password} onChange={handleChange} type="password" id="password" required spellCheck='false'/>
                   
                 </div>
             </div>
